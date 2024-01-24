@@ -26,7 +26,7 @@
         android:id="@+id/btnloginLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Existing user!"
+        android:text="Login"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/passwordLogin"
         />
