@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editKorisnikId"
+        android:text="ID"
+        android:layout_margin="10dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <EditText
+        android:id="@+id/editKorisnikIme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ime"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <EditText
+        android:id="@+id/editKorisnikPrezime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prezime"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <EditText
+        android:id="@+id/editKorisnikUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <EditText
+        android:id="@+id/editKorisnikPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editKorisnikBtn"
+            android:layout_weight="2"
+            android:text="Izmeni"
+            android:background="#54AEB1"
+            android:layout_margin="2dp"
+            />
+        <Button
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/deleteKorisnikBtn"
+            android:layout_weight="2"
+            android:text="Obrisi"
+            android:background="#D32F2F"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="#C5C5C5"
+        />
+
+</LinearLayout>

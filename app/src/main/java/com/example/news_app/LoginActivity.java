@@ -37,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
                     Boolean checkUser = db.checkUser(usrnm, pass);
                     if(checkUser){
                         Toast.makeText(LoginActivity.this, "Uspesno ste ulogovani!", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), AdminActivity.class);
                         startActivity(intent);
                     }
                     else{

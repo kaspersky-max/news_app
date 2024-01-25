@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/ime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ime"
+            android:textSize="18dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <EditText
+            android:id="@+id/prezime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Prezime"
+            android:textSize="18dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textSize="18dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textSize="18dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <EditText
+            android:id="@+id/repassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Retype Password"
+            android:textSize="18dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/btnlogin"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="Login"
+                android:background="#388E3C"
+                android:layout_margin="5dp"
+                android:padding="20dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                />
+
+            <Button
+                android:id="@+id/btnregister"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="Register"
+                android:background="#0288D1"
+                android:layout_margin="5dp"
+                android:padding="20dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

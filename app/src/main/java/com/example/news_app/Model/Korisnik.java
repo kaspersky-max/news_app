@@ -1,18 +1,29 @@
 package com.example.news_app.Model;
 
 public class Korisnik {
+
+    private int id;
     private String ime;
     private String prezime;
     private String username;
     private String password;
-    private TipKorisnika tipKorisnika;
+    private String tip_korisnika;
 
-    public Korisnik(String ime, String prezime, String username, String password, TipKorisnika tipKorisnika) {
+    public Korisnik(int id, String ime, String prezime, String username, String password, String tip_korisnika) {
+        this.id = id;
         this.ime = ime;
         this.prezime = prezime;
         this.username = username;
         this.password = password;
-        this.tipKorisnika = tipKorisnika;
+        this.tip_korisnika = tip_korisnika;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+    public void setId(int id){
+        this.id = id;
     }
 
     public String getIme() {
@@ -47,11 +58,11 @@ public class Korisnik {
         this.password = password;
     }
 
-    public TipKorisnika getTipKorisnika() {
-        return tipKorisnika;
+    public String getTipKorisnika() {
+        return tip_korisnika;
     }
 
-    public void setTipKorisnika(TipKorisnika tipKorisnika) {
-        this.tipKorisnika = tipKorisnika;
+    public void setTipKorisnika(String tip_korisnika) {
+        this.tip_korisnika = tip_korisnika;
     }
 }
