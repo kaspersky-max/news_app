@@ -34,7 +34,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Boolean dodajKorisnika(Korisnik korisnik){
         ContentValues contentValues = new ContentValues();
-        contentValues.put("id", korisnik.getId());
         contentValues.put("ime", korisnik.getIme());
         contentValues.put("prezime", korisnik.getPrezime());
         contentValues.put("username", korisnik.getUsername());

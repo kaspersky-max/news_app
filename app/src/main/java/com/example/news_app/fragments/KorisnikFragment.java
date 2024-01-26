@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +18,8 @@ import com.example.news_app.DBHelper;
 import com.example.news_app.Model.Korisnik;
 import com.example.news_app.Model.TipKorisnika;
 import com.example.news_app.R;
+import com.example.news_app.Views.ViewKorisnikActivity;
+
 public class KorisnikFragment extends Fragment {
 
     EditText ime, prezime, username, password, tip_korisnika;
@@ -65,8 +68,11 @@ public class KorisnikFragment extends Fragment {
                 else{
                     DBHelper db = new DBHelper(getActivity());
                     Korisnik korisnik = new Korisnik(0, imeKorisnika,prezimeKorisnika,usernameKorisnika, passwordKorisnika, tipKorisnika);
-                    db.dodajKorisnika(korisnik);
-                    Toast.makeText(getActivity(), "Korisnik uspesno dodat!", Toast.LENGTH_SHORT).show();
+                    Boolean result = db.dodajKorisnika(korisnik);
+                    if(result)
+                        Toast.makeText(getActivity(), "Korisnik uspesno dodat!", Toast.LENGTH_SHORT).show();
+                    else
+                        Toast.makeText(getActivity(), "Korisnik nije dodat", Toast.LENGTH_SHORT).show();
                     ime.setText("");
                     prezime.setText("");
                     tip_korisnika.setText("");
@@ -79,7 +85,7 @@ public class KorisnikFragment extends Fragment {
         pregledKorisnika.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ViewKorisnikFragment.class);
+                Intent intent = new Intent(getActivity(), ViewKorisnikActivity.class);
                 startActivity(intent);
             }
         });

@@ -23,10 +23,13 @@ public class AdminActivity extends AppCompatActivity {
         frameLayout = (FrameLayout) findViewById(R.id.frameLayout);
         tabLayout = (TabLayout) findViewById(R.id.tablayout);
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new KorisnikFragment())
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .commit();
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                Fragment fragment = null;
+                Fragment fragment = new KorisnikFragment();
 
                 switch (tab.getPosition()){
                     case 0:
@@ -34,8 +37,6 @@ public class AdminActivity extends AppCompatActivity {
                         break;
                     case 1:
                         fragment = new VestiFragment();
-                        break;
-                    case 2:
                         break;
                 }
 

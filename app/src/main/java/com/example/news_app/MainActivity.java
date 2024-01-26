@@ -36,18 +36,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String newime = ime.getText().toString();
-                String newpreime = prezime.getText().toString();
+                String newprezime = prezime.getText().toString();
                 String usrnm = username.getText().toString();
                 String pass = password.getText().toString();
                 String repass = repassword.getText().toString();
                 
-                if(newime.equals("") || newpreime.equals("") || usrnm.equals("") || pass.equals("") || repass.equals(""))
+                if(newime.equals("") || newprezime.equals("") || usrnm.equals("") || pass.equals("") || repass.equals(""))
                     Toast.makeText(MainActivity.this, "Polja ne smeju biti prazna!", Toast.LENGTH_SHORT).show();
                 else{
                     if(pass.equals(repass)){
                         Boolean checkUser = db.checkUsername(usrnm);
                         if(!checkUser){
-                            Korisnik k = new Korisnik(0, newime, newpreime, usrnm, pass, "korisnik");
+                            Korisnik k = new Korisnik(0, newime, newprezime, usrnm, pass, "korisnik");
                             Boolean registrujKorisnika = db.dodajKorisnika(k);
                             if(registrujKorisnika){
                                 Toast.makeText(MainActivity.this, "Korisnik uspesno registrovan!", Toast.LENGTH_SHORT).show();
