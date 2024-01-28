@@ -1,5 +1,6 @@
 package com.example.news_app.Model;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,6 +49,31 @@ public class KorisnikAdapter extends RecyclerView.Adapter<KorisnikAdapter.ViewHo
         holder.editText_username.setText(korisnik.getUsername());
         holder.editText_password.setText(korisnik.getPassword());
         holder.editText_tip_korisnika.setText(korisnik.getTipKorisnika());
+
+        holder.btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String newIme = holder.editText_ime.getText().toString();
+                String newPrezime = holder.editText_prezime.getText().toString();
+                String newUsername = holder.editText_username.getText().toString();
+                String newPassword = holder.editText_password.getText().toString();
+                String newTip_korisnika = holder.editText_tip_korisnika.getText().toString();
+
+                db.izmeniKorisnika(new Korisnik(korisnik.getId(), newIme, newPrezime, newUsername, newPassword, newTip_korisnika));
+                notifyDataSetChanged();
+                ((Activity) context).finish();
+                context.startActivity(((Activity) context).getIntent());
+            }
+        });
+
+        holder.btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                db.obrisiKorisnika(korisnik.getId());
+                korisnici.remove(holder.getAdapterPosition());
+                notifyDataSetChanged();
+            }
+        });
     }
 
 

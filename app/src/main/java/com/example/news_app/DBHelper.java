@@ -45,6 +45,21 @@ public class DBHelper extends SQLiteOpenHelper {
         else return true;
     }
 
+    public void izmeniKorisnika(Korisnik korisnik){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("ime", korisnik.getIme());
+        contentValues.put("prezime", korisnik.getPrezime());
+        contentValues.put("username", korisnik.getUsername());
+        contentValues.put("password", korisnik.getPassword());
+        contentValues.put("tip_korisnika", korisnik.getTipKorisnika());
+        SQLiteDatabase mydb = this.getWritableDatabase();
+        mydb.update("korisnik", contentValues, "id=?", new String[]{String.valueOf(korisnik.getId())});
+    }
+
+    public void obrisiKorisnika(int id){
+        SQLiteDatabase mydb = this.getWritableDatabase();
+        mydb.delete("korisnik", "id=?", new String[]{String.valueOf(id)});
+    }
     public List<Korisnik> getKorisnikLista(){
         String sql = "select * from korisnik";
         SQLiteDatabase mydb = this.getReadableDatabase();
