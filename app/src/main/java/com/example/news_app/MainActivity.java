@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.news_app.Database.DBHelper;
 import com.example.news_app.Model.Korisnik;
 
 

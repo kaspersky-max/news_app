@@ -1,11 +1,9 @@
-package com.example.news_app.fragments;
+package com.example.news_app.Fragments.CRUD;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,21 +12,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.news_app.DBHelper;
+import com.example.news_app.Database.DBHelper;
 import com.example.news_app.Model.Korisnik;
-import com.example.news_app.Model.TipKorisnika;
 import com.example.news_app.R;
 import com.example.news_app.Views.ViewKorisnikActivity;
 
-public class KorisnikFragment extends Fragment {
+public class CRUDKorisnikFragment extends Fragment {
 
     EditText ime, prezime, username, password, tip_korisnika;
     Button dodajKorisnika, pregledKorisnika;
-    public KorisnikFragment() {
+    public CRUDKorisnikFragment() {
         // Required empty public constructor
     }
-    public static KorisnikFragment newInstance() {
-        KorisnikFragment fragment = new KorisnikFragment();
+    public static CRUDKorisnikFragment newInstance() {
+        CRUDKorisnikFragment fragment = new CRUDKorisnikFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;

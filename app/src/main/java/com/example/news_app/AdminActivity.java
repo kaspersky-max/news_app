@@ -7,8 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
-import com.example.news_app.fragments.KorisnikFragment;
-import com.example.news_app.fragments.VestiFragment;
+import com.example.news_app.Fragments.CRUD.CRUDKorisnikFragment;
+import com.example.news_app.Fragments.CRUD.CRUDVestiFragment;
 import com.google.android.material.tabs.TabLayout;
 
 public class AdminActivity extends AppCompatActivity {
@@ -23,20 +23,20 @@ public class AdminActivity extends AppCompatActivity {
         frameLayout = (FrameLayout) findViewById(R.id.frameLayout);
         tabLayout = (TabLayout) findViewById(R.id.tablayout);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new KorisnikFragment())
+        getSupportFragmentManager().beginTransaction().replace(R.id.frameLayout, new CRUDKorisnikFragment())
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .commit();
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                Fragment fragment = new KorisnikFragment();
+                Fragment fragment = new CRUDKorisnikFragment();
 
                 switch (tab.getPosition()){
                     case 0:
-                        fragment = new KorisnikFragment();
+                        fragment = new CRUDKorisnikFragment();
                         break;
                     case 1:
-                        fragment = new VestiFragment();
+                        fragment = new CRUDVestiFragment();
                         break;
                 }
 

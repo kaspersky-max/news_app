@@ -7,9 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.news_app.DBHelper;
+import com.example.news_app.Database.DBHelper;
 import com.example.news_app.Model.Korisnik;
-import com.example.news_app.Model.KorisnikAdapter;
+import com.example.news_app.Adapters.KorisnikAdapter;
 import com.example.news_app.R;
 
 import java.util.List;

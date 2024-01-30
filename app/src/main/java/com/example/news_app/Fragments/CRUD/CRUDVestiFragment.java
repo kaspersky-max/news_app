@@ -1,4 +1,4 @@
-package com.example.news_app.fragments;
+package com.example.news_app.Fragments.CRUD;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,12 +9,12 @@ import androidx.fragment.app.Fragment;
 
 import com.example.news_app.R;
 
-public class VestiFragment extends Fragment {
-    public VestiFragment() {
+public class CRUDVestiFragment extends Fragment {
+    public CRUDVestiFragment() {
         // Required empty public constructor
     }
-    public static VestiFragment newInstance() {
-        VestiFragment fragment = new VestiFragment();
+    public static CRUDVestiFragment newInstance() {
+        CRUDVestiFragment fragment = new CRUDVestiFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
