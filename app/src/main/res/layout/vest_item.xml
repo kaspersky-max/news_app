@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editVestId"
+        android:hint="ID"
+        android:layout_margin="10dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <EditText
+        android:id="@+id/editVestAutor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Autor"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <EditText
+        android:id="@+id/editVestNaslov"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Naslov"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <EditText
+        android:id="@+id/editVestSadrzaj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Sadrzaj"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <EditText
+        android:id="@+id/editVestUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Url"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <EditText
+        android:id="@+id/editVestDatum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Datum Postavljanja"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editVestBtn"
+            android:layout_weight="2"
+            android:text="Izmeni"
+            android:background="#54AEB1"
+            android:layout_margin="2dp"
+            android:textColor="@color/white"
+            />
+        <Button
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/deleteVestBtn"
+            android:layout_weight="2"
+            android:text="Obrisi"
+            android:background="#D32F2F"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:background="#C5C5C5"
+        />
+
+</LinearLayout>

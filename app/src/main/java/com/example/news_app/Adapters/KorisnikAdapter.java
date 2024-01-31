@@ -34,7 +34,7 @@ public class KorisnikAdapter extends RecyclerView.Adapter<KorisnikAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.lista_korisnika, parent, false);
+        View view = inflater.inflate(R.layout.korisnik_item, parent, false);
         ViewHolder viewHolder = new ViewHolder(view);
 
         return viewHolder;

@@ -1,39 +1,43 @@
 package com.example.news_app.Model;
 
 public class Vest {
-    private String author, title, description, url, urlToImage, publishedAt;
+    int id;
+    private String autor, naslov, sadrzaj, url, urlToImage, datumPostavljanja;
 
-    public Vest(String author, String title, String description, String url, String urlToImage, String publishedAt) {
-        this.author = author;
-        this.title = title;
-        this.description = description;
+    public Vest(int id, String author, String title, String description, String url, String urlToImage, String publishedAt) {
+        this.id = id;
+        this.autor = author;
+        this.naslov = title;
+        this.sadrzaj = description;
         this.url = url;
         this.urlToImage = urlToImage;
-        this.publishedAt = publishedAt;
+        this.datumPostavljanja = publishedAt;
     }
 
-    public String getAuthor() {
-        return author;
+    public int getId(){return id; }
+    public void setId(int id){ this.id = id; }
+    public String getAutor() {
+        return autor;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 
-    public String getTitle() {
-        return title;
+    public String getNaslov() {
+        return naslov;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setNaslov(String naslov) {
+        this.naslov = naslov;
     }
 
-    public String getDescription() {
-        return description;
+    public String getSadrzaj() {
+        return sadrzaj;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setSadrzaj(String sadrzaj) {
+        this.sadrzaj = sadrzaj;
     }
 
     public String getUrl() {
@@ -52,11 +56,11 @@ public class Vest {
         this.urlToImage = urlToImage;
     }
 
-    public String getPublishedAt() {
-        return publishedAt;
+    public String getDatumPostavljanja() {
+        return datumPostavljanja;
     }
 
-    public void setPublishedAt(String publishedAt) {
-        this.publishedAt = publishedAt;
+    public void setDatumPostavljanja(String datumPostavljanja) {
+        this.datumPostavljanja = datumPostavljanja;
     }
 }

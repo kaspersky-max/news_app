@@ -47,10 +47,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             }
         });
 
-        holder.mtime.setText("Published At: "+vesti.get(position).getPublishedAt());
-        holder.mauthor.setText(vesti.get(position).getAuthor());
-        holder.mheading.setText(vesti.get(position).getTitle());
-        holder.mcontent.setText(vesti.get(position).getDescription());
+        holder.mtime.setText("Published At: "+vesti.get(position).getDatumPostavljanja());
+        holder.mauthor.setText(vesti.get(position).getAutor());
+        holder.mheading.setText(vesti.get(position).getNaslov());
+        holder.mcontent.setText(vesti.get(position).getSadrzaj());
         Glide.with(context).load(vesti.get(position).getUrlToImage()).into(holder.imageView);
     }
 

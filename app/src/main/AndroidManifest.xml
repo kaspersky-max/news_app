@@ -21,6 +21,7 @@
         <activity
             android:name=".Views.ViewKorisnikActivity"
             android:exported="false" />
+        <activity android:name=".Views.ViewVestActivity" />
         <activity
             android:name=".AdminActivity"
             android:exported="false" />

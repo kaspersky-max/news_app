@@ -37,10 +37,18 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Popunite sva polja!", Toast.LENGTH_SHORT).show();
                 else{
                     Boolean checkUser = db.checkUser(usrnm, pass);
+                    String tipKorisnika = db.getTipKorisnika(usrnm, pass);
                     if(checkUser){
-                        Toast.makeText(LoginActivity.this, "Uspesno ste ulogovani!", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                        startActivity(intent);
+                        if(tipKorisnika.equals("korisnik")) {
+                            Toast.makeText(LoginActivity.this, "Uspesno ste ulogovani!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                            startActivity(intent);
+                        }
+                        else if(tipKorisnika.equals("admin")){
+                            Toast.makeText(LoginActivity.this, "Uspesno ste ulogovani!", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(), AdminActivity.class);
+                            startActivity(intent);
+                        }
                     }
                     else{
                         Toast.makeText(LoginActivity.this, "Nevazeci podaci!", Toast.LENGTH_SHORT).show();

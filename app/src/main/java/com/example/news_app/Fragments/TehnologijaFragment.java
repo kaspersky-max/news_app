@@ -78,7 +78,7 @@ public class TehnologijaFragment extends Fragment {
                             String urlToImage = article.optString("urlToImage");
                             String publishedAt = article.optString("publishedAt");
 
-                            Vest vest = new Vest(author,title,description,url,urlToImage,publishedAt);
+                            Vest vest = new Vest(0, author,title,description,url,urlToImage,publishedAt);
                             vesti.add(vest);
                             //Toast.makeText(getContext(), author, Toast.LENGTH_SHORT).show();
                         }
